@@ -1,0 +1,88 @@
+---
+title: "Brand"
+excerpt: "Brand assets and guidelines"
+meta:
+  title: Brand guidelines
+eleventyNavigation:
+  key: Brand
+  parent: Design tokens
+  order: -1
+---
+
+<h2>Logo</h2>
+
+<h5>Default logo</h5>
+
+{% preview %}
+  <img
+    src="/assets/svg/fundermaps.svg"
+    alt="Default logo Fundermaps"
+    class="h-16">
+{% endpreview %}
+
+<h5>Greyscale logo</h5>
+
+<p>This logo can be used when the logo needs to be less prominent.</p>
+
+{% preview %}
+  <img
+    src="/assets/svg/fundermaps-greyscale.svg"
+    alt="Greyscale logo Fundermaps"
+    class="h-16">
+{% endpreview %}
+
+<h5>Inverted logo</h5>
+
+<p>This logo can be used on dark backgrounds.</p>
+
+{% preview "bg-blue-900" %}
+  <img
+    src="/assets/svg/fundermaps-inverted.svg"
+    alt="Inverted logo Fundermaps"
+    class="h-16">
+{% endpreview %}
+
+<h5>Mark only logo's</h5>
+
+<p>These logo's can be used when less space is available.</p>
+
+{% preview %}
+  <div class="flex gap-8">
+    <img
+      src="/assets/svg/fundermaps-mark.svg"
+      alt="Mark only logo Fundermaps"
+      class="h-16">
+    <img
+      src="/assets/svg/fundermaps-mark-greyscale.svg"
+      alt="Mark only greyscale logo Fundermaps"
+      class="h-16">
+  </div>
+{% endpreview %}
+
+<h2>Colors</h2>
+
+<h5>Primary colors</h5>
+
+<p>The primary colors of Fundermaps are blue, green and yellow. For more information on colors you can visit
+  <a href="/design-tokens/colors">the colors section</a>.
+</p>
+
+{% preview %}
+  <div class="flex gap-8">
+    <div class="w-16 h-16 rounded bg-blue-500"></div>
+    <div class="w-16 h-16 rounded bg-green-500"></div>
+    <div class="w-16 h-16 rounded bg-yellow-500"></div>
+  </div>
+{% endpreview %}
+
+<h5>Text colors</h5>
+
+<p>The primary text is dark blue and the secondary text color is grey.  For more information on text you can visit
+  <a href="/design-tokens/typography">the typography section</a>.</p>
+
+{% preview %}
+  <div class="space-y-6">
+    <p class="text-blue-900">This text has a class of "text-blue-900"</p>
+    <p class="text-grey-700">This text has a class of "text-grey-700"</p>
+  </div>
+{% endpreview %}

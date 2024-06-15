@@ -1,0 +1,14 @@
+<template shadowrootmode="open">
+  <style webc:keep>
+    .mand {
+      font-size: 1.25rem;
+    }
+  </style>
+
+  <template @raw="myHtmlContent" webc:type="11ty" 11ty:type="liquid">
+    <link rel="stylesheet" href="{{ '../../assets/css/design-system.css' | url }}" webc:keep />
+    <div class="mand | text-red-500">
+      <slot>Fallback slot content</slot>
+    </div>
+  </template>
+</template>

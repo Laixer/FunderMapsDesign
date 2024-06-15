@@ -1,0 +1,37 @@
+<div class="input-group">
+  <div class="input--checkbox">
+    <input
+      type="checkbox"
+      id="checkbox-default{% if disabled %}-disabled{% endif %}"
+      name="checkbox-default{% if disabled %}-disabled{% endif %}"
+      class="sr-only"
+      {% if disabled %}
+      disabled
+      {% endif %} />
+    <label for="checkbox-default{% if disabled %}-disabled{% endif %}" class="input__label">
+      Checkbox default
+      {% if disabled %}
+        disabled
+      {% endif %}
+    </label>
+  </div>
+</div>
+<div class="input-group">
+  <div class="input--checkbox">
+    <input
+      type="checkbox"
+      id="checkbox-checked{% if disabled %}-disabled{% endif %}"
+      name="checkbox-checked{% if disabled %}-disabled{% endif %}"
+      checked
+      class="sr-only"
+      {% if disabled %}
+      disabled
+      {% endif %} />
+    <label for="checkbox-checked{% if disabled %}-disabled{% endif %}" class="input__label">
+      Checkbox checked
+      {% if disabled %}
+        disabled
+      {% endif %}
+    </label>
+  </div>
+</div>

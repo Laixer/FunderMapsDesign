@@ -1,0 +1,47 @@
+{% assign variant = '' %}
+
+{% if narrow %}
+  {% assign variant = 'narrow' %}
+{% endif %}
+
+{% if full %}
+  {% assign variant = 'full' %}
+{% endif %}
+
+<div
+  class="modal"
+  aria-role="dialog"
+  aria-describedby="dialog-label"
+  aria-modal="true">
+  <div
+    class="panel pointer-events-auto"
+    aria-role="dialog"
+    aria-describedby="dialog-label"
+    aria-modal="true"
+    data-variant="{{variant}}">
+    <header class="panel__header">
+      <h4 id="dialog-label" class="heading-4">Alle informatie</h4>
+      <button class="button button--link | group absolute right-8 top-3 text-blue-900 hover:text-red-500">
+        <div class="button__label">Sluit</div>
+        {% inlineSvg "close" "aspect-square w-3.5 text-red-500" -%}
+      </button>
+    </header>
+    <div class="panel__content | -mx-6 space-y-4 px-6">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam mollitia quas corporis iure nostrum totam dolorem maxime! Iste, consequatur distinctio! Sit, molestiae unde! Dicta provident eos nisi quas ducimus saepe!
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam mollitia quas corporis iure nostrum totam dolorem maxime! Iste, consequatur distinctio! Sit, molestiae unde! Dicta provident eos nisi quas ducimus saepe!
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam mollitia quas corporis iure nostrum totam dolorem maxime! Iste, consequatur distinctio! Sit, molestiae unde! Dicta provident eos nisi quas ducimus saepe!
+      </p>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam mollitia quas corporis iure nostrum totam dolorem maxime! Iste, consequatur distinctio! Sit, molestiae unde! Dicta provident eos nisi quas ducimus saepe!
+      </p>
+    </div>
+    <footer class="panel__footer">
+      <a href="javascript: console.log('clicked link');" class="button button--solid">Call to action</a>
+    </footer>
+  </div>
+</div>

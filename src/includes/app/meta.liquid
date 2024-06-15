@@ -1,0 +1,24 @@
+{% comment %} General {% endcomment %}
+<meta name="description" content="{{ meta.description | default: app.description }}">
+<meta name="generator" content="{{ eleventy.generator }}">
+
+  {% comment %} Open Graph {% endcomment %}
+<meta property="og:site_name" content="{{ app.title }}">
+<meta property="og:title" content="{{ meta.title | default: app.title }}">
+<meta property="og:description" content="{{ meta.description | default: app.description }}">
+<meta property="og:url" content="{{ page.url | default: url }}">
+<meta property="og:locale" content="{{  meta.locale | default: app.locale }}">
+
+{%- if meta.image -%}
+  <meta property="og:image" content="{{ meta.image | default: url }}">
+{%- endif -%}
+{% comment %} End Open Graph {% endcomment %}
+
+{% comment %} Twitter {% endcomment %}
+<meta name="twitter:card" content="{% if meta.image -%}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:title" content="{{ title | default: meta.title }}">
+<meta name="twitter:description" content="{{ meta.description | default: app.description}}">
+{%- if meta.image -%}
+  <meta property="twitter:image" content="{{ meta.image | default: url }}">
+{%- endif -%}
+{% comment %} End Twitter {% endcomment %}

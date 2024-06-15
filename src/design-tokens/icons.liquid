@@ -1,0 +1,42 @@
+---
+title: "Icons"
+excerpt: "A collection of icons used in the design system."
+meta:
+  title: Icons
+eleventyNavigation:
+  key: Icons
+  parent: Design tokens
+---
+
+<p>
+  More information on how to use these icons can be found in the
+  <a href="/components/icon">icon component</a>
+  documentation.
+</p>
+
+<ul>
+  <li>Classification icons: used to indicate severity</li>
+  <li>Facade icons: used to indicate where on the building</li>
+  <li>Functional icons: used to enhance the UI</li>
+  <li>Fundermaps icons: used to enhance the UI, but can have 2 colors</li>
+</ul>
+
+{% for set in iconsFolder %}
+  <div class="space-y-3">
+    <h5>
+      {{ set[0] | capitalize }} Icons
+    </h5>
+    <div class="flex flex-wrap gap-2">
+      {% assign folder = set[0] %}
+      {% for icon in set[1] %}
+        <div class="text-center space-y-1">
+          <div class="ld-token | bg-white">
+            {% inlineSvg icon "w-5 aspect-square" false folder %}
+          </div>
+          <div class="ld-label">
+            {{ icon }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}

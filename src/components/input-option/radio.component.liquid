@@ -1,0 +1,35 @@
+<div class="input-group">
+  <div class="input--radio">
+    <input
+      type="radio"
+      id="radio-default{% if disabled %}-disabled{% endif %}"
+      name="radio{% if disabled %}-disabled{% endif %}"
+      class="sr-only"
+      {% if disabled %}
+      disabled
+      {% endif %} />
+    <label for="radio-default{% if disabled %}-disabled{% endif %}" class="input__label">Radio default
+      {% if disabled %}
+        disabled
+      {% endif %}
+    </label>
+  </div>
+</div>
+<div class="input-group">
+  <div class="input--radio">
+    <input
+      type="radio"
+      id="radio-checked{% if disabled %}-disabled{% endif %}"
+      name="radio{% if disabled %}-disabled{% endif %}"
+      checked
+      class="sr-only"
+      {% if disabled %}
+      disabled
+      {% endif %} />
+    <label for="radio-checked{% if disabled %}-disabled{% endif %}" class="input__label">Radio checked
+      {% if disabled %}
+        disabled
+      {% endif %}
+    </label>
+  </div>
+</div>

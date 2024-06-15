@@ -1,0 +1,251 @@
+@import "https://unpkg.com/open-props";
+
+:where(html) {
+  /* Background */
+  --ld-bg-color-light: var(--stone-0);
+  --ld-bg-color: var(--stone-1);
+  --ld-bg-color-dark: var(--stone-3);
+
+  /* Text */
+  --ld-text-color: var(--stone-11);
+  --ld-text-color-light: var(--stone-7);
+
+  /* Links */
+  --ld-link-color: var(--red-5);
+  --ld-link-color-active: var(--red-5);
+  --ld-link-color-hover: var(--blue-6);
+
+  /* Borders */
+  --ld-border-color: var(--stone-2);
+  --ld-border-color-dark: var(--stone-3);
+  --ld-border-radius: var(--radius-2);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+:where(#lemone-design) {
+  background-color: var(--ld-bg-color-light);
+  color: var(--ld-text-color);
+
+  font-size: 1rem;
+
+  .ld-main {
+    width: 100%;
+    height: 100%;
+    &[data-variant="sidebar"] {
+      display: grid;
+      grid-template-columns: [sidebar] 16rem [main] 1fr;
+    }
+  }
+
+  .ld-sidebar {
+    border-right: 1px solid var(--ld-border-color);
+    display: grid;
+    gap: 2rem;
+    grid-template-rows: [header] auto [nav] 1fr [footer] auto;
+    background-color: white;
+
+    /* prettier-ignore */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    height: 100%;
+    overflow: hidden;
+
+    nav {
+      overflow: scroll;
+    }
+  }
+
+  .ld-navigation {
+    a {
+      color: inherit;
+    }
+    a:hover {
+      color: var(--ld-link-color-hover);
+    }
+    .hasChildren {
+      ul {
+        margin-left: 0.75rem;
+      }
+    }
+    :has(.current) > a {
+      color: var(--ld-link-color-active);
+    }
+    .current > a {
+      color: var(--ld-link-color-active);
+    }
+
+    li ul,
+    li + li {
+      margin-block-start: 0.5rem;
+    }
+  }
+
+  /* Lemone Design Typography */
+  .ld-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 500;
+      line-height: 1.125em;
+      color: inherit;
+      /* prettier-ignore */
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    h1 {
+      font-size: 2.488rem;
+    }
+
+    h2 {
+      font-size: 2.074rem;
+    }
+
+    h3 {
+      font-size: 1.728rem;
+    }
+
+    h4 {
+      font-size: 1.44rem;
+    }
+
+    h5 {
+      font-size: 1.2rem;
+    }
+
+    a:not(:has(div, p, h1, h2, h3, h4, h5, h6, ul, ol, .ld-card)) {
+      text-decoration: underline;
+      text-underline-offset: 0.125em;
+      color: var(--ld-link-color);
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-inline-start: var(--size-4);
+    }
+
+    ol {
+      list-style-type: decimal;
+      padding-inline-start: var(--size-4);
+    }
+  }
+
+  .ld-main {
+    overflow: clip;
+  }
+
+  main {
+    overflow-y: scroll;
+  }
+
+  .ld-content > * + * {
+    margin-block-start: var(--size-5);
+  }
+
+  .ld-component {
+    > * + * {
+      margin: 0;
+      margin-block-start: 1rem;
+    }
+  }
+
+  .ld-preview {
+    background-color: white;
+    border: 1px solid var(--ld-border-color);
+    border-radius: 0.5rem;
+
+    resize: horizontal;
+    overflow: auto;
+    max-width: 100%;
+    min-width: 25rem;
+
+    iframe {
+      width: 100%;
+    }
+  }
+
+  .ld-label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--ld-text-color-light);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ld-token {
+    width: var(--size-12);
+    aspect-ratio: var(--ratio-golden);
+    border-radius: var(--ld-border-radius);
+    border: 1px solid var(--ld-border-color-dark);
+    display: grid;
+    place-items: center;
+  }
+
+  .ld-markup {
+    background-color: #272822;
+    border-radius: 0.5rem;
+    max-height: 37.5rem;
+    overflow-y: scroll;
+
+    &.inline > pre {
+      margin: 0;
+      padding-block: 0.25em;
+    }
+  }
+}
+table {
+  thead {
+    background-color: var(--ld-bg-color-dark);
+  }
+  tr + tr {
+    border-top: 1px solid var(--ld-border-color);
+  }
+  th {
+    text-align: left;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  th,
+  td {
+    padding-block: 0.75rem;
+    padding-inline: 1rem;
+    vertical-align: top;
+  }
+}
+
+.ld-card {
+  display: grid;
+  gap: var(--size-3);
+  grid-template-rows: auto 1fr;
+
+  &:hover {
+    .ld-group-hover {
+      color: var(--blue-6);
+    }
+  }
+}
+
+.ld-card__content {
+  > * + * {
+    margin-block-start: var(--size-2);
+  }
+}
+
+.ld-card__media {
+  background: var(--ld-bg-color-dark);
+  border-radius: var(--ld-border-radius);
+  border: 1px solid var(--ld-border-color);
+  display: grid;
+  place-content: center;
+}

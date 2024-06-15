@@ -1,0 +1,50 @@
+<div class="input-group">
+  <div class="input--toggle">
+    <input
+      type="checkbox"
+      id="toggle-default{% if disabled %}-disabled{% endif %}"
+      name="toggle-default{% if disabled %}-disabled{% endif %}"
+      class="sr-only"
+      {% if disabled %}
+      disabled
+      {% endif %} />
+    <label for="toggle-default{% if disabled %}-disabled{% endif %}" class="input__label">
+      Toggle default
+      {% if disabled %}
+        disabled
+      {% endif %}
+    </label>
+  </div>
+</div>
+<div class="input-group">
+  <div class="input--toggle">
+    <input
+      type="checkbox"
+      id="toggle-no-label{% if disabled %}-disabled{% endif %}"
+      name="toggle-no-label{% if disabled %}-disabled{% endif %}"
+      class="sr-only"
+      {% if disabled %}
+      disabled
+      {% endif %} />
+    <label for="toggle-no-label{% if disabled %}-disabled{% endif %}" class="input__label">&#8203;</label>
+  </div>
+</div>
+<div class="input-group">
+  <div class="input--toggle">
+    <input
+      type="checkbox"
+      id="toggle-checked{% if disabled %}-disabled{% endif %}"
+      name="toggle-checked{% if disabled %}-disabled{% endif %}"
+      checked
+      class="sr-only"
+      {% if disabled %}
+      disabled
+      {% endif %} />
+    <label for="toggle-checked{% if disabled %}-disabled{% endif %}" class="input__label">
+      Toggle checked
+      {% if disabled %}
+        disabled
+      {% endif %}
+    </label>
+  </div>
+</div>

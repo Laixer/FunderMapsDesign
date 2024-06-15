@@ -1,0 +1,15 @@
+---
+layout: app
+---
+
+{% block main %}
+  {% include "app/header" %}
+
+  <div class="ld-main">
+    <main class="ld-content | px-4 py-4">
+      {{ content }}
+    </main>
+  </div>
+
+  {% include "app/footer" %}
+{% endblock %}

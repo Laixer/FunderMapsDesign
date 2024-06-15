@@ -1,0 +1,54 @@
+@import "https://unpkg.com/open-props";
+
+:where(html) {
+  /* Background */
+  --ld-bg-color-light: var(--stone-0);
+  --ld-bg-color: var(--stone-1);
+  --ld-bg-color-dark: var(--stone-2);
+
+  /* Text */
+  --ld-text-color: var(--stone-11);
+  --ld-text-color-light: var(--stone-7);
+
+  /* Links */
+  --ld-link-color: var(--red-5);
+  --ld-link-color-active: var(--red-5);
+  --ld-link-color-hover: var(--blue-6);
+
+  /* Borders */
+  --ld-border-color: var(--stone-2);
+  --ld-border-color-dark: var(--stone-3);
+  --ld-border-radius: var(--radius-2);
+}
+
+html,
+body {
+  /* height: 100vh; */
+  width: 100vw;
+}
+
+body {
+  padding: 3rem;
+}
+
+.ld-preview--font {
+  width: 100%;
+
+  --padding-block: var(--size-3);
+  > * {
+    padding-block-end: var(--padding-block);
+  }
+  > * + * {
+    border-top: 1px solid var(--ld-border-color);
+    padding-block-start: var(--padding-block);
+  }
+}
+
+.ld-label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--ld-text-color-light);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

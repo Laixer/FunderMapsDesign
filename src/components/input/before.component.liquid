@@ -1,0 +1,23 @@
+<div class="space-y-6">
+  <div class="input--text" x-data="{passwordHidden: true}">
+    <label for="input-default" class="input__label">Input Before</label>
+    <div class="input-field">
+      <button
+        class="input-field__before"
+        type="button"
+        @click="passwordHidden = !passwordHidden">
+        <span x-show="passwordHidden">{% inlineSvg "locked" "aspect-square w-4 text-grey-700" -%}</span>
+        <span x-show="!passwordHidden">{% inlineSvg "unlocked" "aspect-square w-4 text-grey-700" -%}</span>
+        <span class="sr-only">Toggle password visibility</span>
+      </button>
+      <input
+        type="password"
+        :type="passwordHidden ? 'password' : 'text'"
+        id="input-default"
+        name="input-default"
+        placeholder="Type something"
+        value="wachtwoord" />
+    </div>
+    <div class="input__message">Password must contain at least 12 chars and 1 special char</div>
+  </div>
+</div>

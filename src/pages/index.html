@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app" class="page--styleguide | grid">
+      <header id="header" class="sg-page-header">
+        <div class="container mx-auto">
+          <h1>Styleguide</h1>
+          <nav>
+            <ul class="flex gap-4">
+              <li class="sg-current">
+                <a href="index.html">Base</a>
+              </li>
+              <li>
+                <a href="components.html">Components</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <div class="sg-page-main | space-y-10 py-10">
+        <!-- Basic typography styles -->
+        <section id="typography" class="sg-section">
+          <div class="container mx-auto">
+            <header class="sg-section__header">
+              <h2>typography</h2>
+            </header>
+            <div class="content">
+              <h1>Heading 1</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <strong>Similique accusantium</strong> veniam accusamus ducimus, eveniet aliquid
+                <u>atque reiciendis</u> beatae illum amet fugiat odit fuga <em>nobis commodi</em> cupiditate facere
+                distinctio modi sed.
+              </p>
+              <h2>Heading 2</h2>
+              <p>
+                Lorem ipsum dolor sit, amet
+                <a href="">consectetur adipisicing elit</a>. Similique accusantium veniam accusamus ducimus, eveniet
+                aliquid atque reiciendis beatae illum amet fugiat odit fuga nobis commodi
+                <s>cupiditate facere</s> distinctio modi sed.
+              </p>
+              <h3>Heading 3</h3>
+              <p>
+                Lorem ipsum dolor sit, <code>amet consectetur</code> adipisicing elit. Similique accusantium veniam
+                accusamus ducimus, eveniet aliquid atque reiciendis beatae illum amet fugiat odit fuga nobis commodi
+                cupiditate facere distinctio modi sed.
+              </p>
+              <ol class="" role="list">
+                <li class="item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, consequuntur!</li>
+                <li class="item">Ut ullam, quod voluptatem labore temporibus repellat assumenda harum ea?</li>
+                <li class="item">Labore esse molestiae dolorem id in, inventore est qui laudantium!</li>
+              </ol>
+              <p>
+                Lorem ipsum <sup>dolor</sup> sit amet consecteturadipisicing
+                <sub>adipisicing</sub>
+                elit. Blanditiis autem praesentium tempore ab eligendi officiis! Rerum fugit, et, enim maxime laboriosam
+                nam, saepe cumque velit ab aperiam aut suscipit consectetur?
+              </p>
+              <h4>Heading 4</h4>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique accusantium veniam accusamus
+                ducimus, eveniet aliquid atque reiciendis beatae illum amet fugiat odit fuga nobis commodi cupiditate
+                facere distinctio modi sed.
+              </p>
+              <h5 class="sg-item__title">Heading 5</h5>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                <abbr title="Like the accusers">Similique accusantium</abbr>
+                veniam accusamus ducimus, eveniet aliquid atque reiciendis beatae illum amet fugiat odit fuga nobis
+                commodi cupiditate facere distinctio modi sed.
+              </p>
+              <ul class="ml-6 list-disc" role="list">
+                <li class="item">Lorem ipsum dolor sit amet.</li>
+                <li class="item">Voluptates nihil quasi dolor? Deserunt.</li>
+                <li class="item">Perferendis asperiores ad possimus alias!</li>
+              </ul>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ipsam, non facere dolorem optio,
+                eligendi cum deleniti soluta, at praesentium odio? Impedit obcaecati excepturi, dicta cum fugiat
+                perferendis dignissimos eligendi.
+              </p>
+              <h6 class="font-bold">Heading 6</h6>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique accusantium veniam accusamus
+                ducimus, eveniet aliquid atque reiciendis beatae illum amet fugiat odit fuga nobis commodi cupiditate
+                facere distinctio modi sed.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Brand logo -->
+        <section id="brand" class="sg-section">
+          <div class="container mx-auto">
+            <header class="sg-section__header">
+              <h2>brand</h2>
+            </header>
+            <div class="sg-item">
+              <h5 class="sg-item__title">Logo</h5>
+              <div class="flex flex-wrap gap-8">
+                <article class="space-y-1">
+                  <div class="rounded-xl bg-grey-200 p-8">
+                    <img src="./src/svg/fundermaps.svg" alt="Logo" class="h-20" />
+                  </div>
+                  <div class="sg-label">default</div>
+                </article>
+                <article class="space-y-1">
+                  <div class="rounded-xl bg-blue-900 p-8">
+                    <img src="./src/svg/fundermaps-inverted.svg" alt="Logo" class="h-20" />
+                  </div>
+                  <div class="sg-label">inverted</div>
+                </article>
+                <article class="space-y-1">
+                  <div class="rounded-xl bg-blue-900 p-8">
+                    <img src="./src/svg/fundermaps-greyscale.svg" alt="Logo" class="h-20" />
+                  </div>
+                  <div class="sg-label">inverted</div>
+                </article>
+              </div>
+            </div>
+            <div class="sg-item">
+              <h5 class="sg-item__title">Logo - mark</h5>
+              <div class="flex flex-wrap gap-8">
+                <article class="space-y-1">
+                  <div class="rounded-xl bg-grey-200 p-8">
+                    <img src="./src/svg/fundermaps-mark.svg" alt="Logo" class="h-20" />
+                  </div>
+                  <div class="sg-label">inverted</div>
+                </article>
+                <article class="space-y-1">
+                  <div class="rounded-xl bg-blue-900 p-8">
+                    <img src="./src/svg/fundermaps-mark-greyscale.svg" alt="Logo" class="h-20" />
+                  </div>
+                  <div class="sg-label">inverted</div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Colors -->
+        <section id="colors" class="sg-section">
+          <div class="container mx-auto">
+            <header class="sg-section__header">
+              <h2>colors</h2>
+            </header>
+
+            <div class="sg-item">
+              <h5 class="sg-item__title">Base</h5>
+              <div class="flex flex-wrap gap-3">
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded border border-grey-200 bg-transparent"></div>
+                  <div class="sg-label">transparent</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-current"></div>
+                  <div class="sg-label">current</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded border border-grey-200 bg-white"></div>
+                  <div class="sg-label">white</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-black"></div>
+                  <div class="sg-label">black</div>
+                </div>
+              </div>
+            </div>
+            <div class="sg-item">
+              <h5 class="sg-item__title">Blue</h5>
+              <div class="flex flex-wrap gap-3">
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-blue-100"></div>
+                  <div class="sg-label">100</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-blue-500"></div>
+                  <div class="sg-label">500</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-blue-900"></div>
+                  <div class="sg-label">900</div>
+                </div>
+              </div>
+            </div>
+            <div class="sg-item">
+              <h5 class="sg-item__title">Green</h5>
+              <div class="flex flex-wrap gap-3">
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-green-100"></div>
+                  <div class="sg-label">100</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-green-200"></div>
+                  <div class="sg-label">200</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-green-500"></div>
+                  <div class="sg-label">500</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-green-700"></div>
+                  <div class="sg-label">700</div>
+                </div>
+              </div>
+            </div>
+            <div class="sg-item">
+              <h5 class="sg-item__title">Grey</h5>
+              <div class="flex flex-wrap gap-3">
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-grey-100"></div>
+                  <div class="sg-label">100</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-grey-200"></div>
+                  <div class="sg-label">200</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-grey-400"></div>
+                  <div class="sg-label">400</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-grey-700"></div>
+                  <div class="sg-label">700</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-grey-800"></div>
+                  <div class="sg-label">800</div>
+                </div>
+              </div>
+            </div>
+            <div class="sg-item">
+              <h5 class="sg-item__title">Yellow</h5>
+              <div class="flex flex-wrap gap-3">
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-yellow-100"></div>
+                  <div class="sg-label">100</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-yellow-500"></div>
+                  <div class="sg-label">500</div>
+                </div>
+              </div>
+            </div>
+            <div class="sg-item">
+              <h5 class="sg-item__title">Red</h5>
+              <div class="flex flex-wrap gap-3">
+                <div class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-red-500"></div>
+                  <div class="sg-label">500</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Icons devided in different groups -->
+        <section id="icons" class="sg-section">
+          <div class="container mx-auto">
+            <header class="sg-section__header">
+              <h2>icons</h2>
+            </header>
+            <div class="sg-item">
+              <h5 class="sg-item__title">Functional</h5>
+              <div class="flex flex-wrap gap-3">
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/alert.svg" alt="Icon arrow right" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/arrow-right.svg" alt="Icon arrow right" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/arrow-left.svg" alt="Icon arrow right" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/bell.svg" alt="Icon bell" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/chat.svg" alt="Icon check" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/check.svg" alt="Icon check" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/checkbox.svg" alt="Icon check" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/chevron-down.svg" alt="Icon check" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/chevron-left.svg" alt="Icon check" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/chevron-right.svg" alt="Icon check" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/chevron-up.svg" alt="Icon check" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/close.svg" alt="Icon exit" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/exit.svg" alt="Icon exit" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/filter.svg" alt="Icon locked" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/info.svg" alt="Icon locked" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/locked.svg" alt="Icon locked" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/minus.svg" alt="Icon minus" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/plus.svg" alt="Icon plus" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/search.svg" alt="Icon search" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/select-marker-disabled.svg" alt="Icon close" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/select-marker.svg" alt="Icon close" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/switch.svg" alt="Icon unlocked" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/target.svg" alt="Icon unlocked" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/unlocked.svg" alt="Icon unlocked" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/up-down.svg" alt="Icon up down" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/validation-error.svg" alt="Icon up down" class="w-4" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="./src/svg/icons/validation-success.svg" alt="Icon up down" class="w-4" />
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="sg-item">
+              <h5 class="sg-item__title">Fundermaps</h5>
+              <div class="flex flex-wrap gap-3">
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/align-front.svg" alt="Icon Fundermaps Align Front" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/apps.svg" alt="Icon Fundermaps Apps" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/bell.svg" alt="Icon Fundermaps Bell" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/calendar.svg" alt="Icon Fundermaps Calendar" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img
+                      src="src/svg/icons/fundermaps/circle-check.svg"
+                      alt="Icon Fundermaps Circle Check"
+                      class="w-6"
+                    />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img
+                      src="src/svg/icons/fundermaps/circle-minus.svg"
+                      alt="Icon Fundermaps Circle Minus"
+                      class="w-6"
+                    />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/circle-plus.svg" alt="Icon Fundermaps Circle Plus" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/copy.svg" alt="Icon Fundermaps Copy" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/email.svg" alt="Icon Fundermaps Email" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/file-pdf.svg" alt="Icon Fundermaps File Pdf" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/home-info.svg" alt="Icon Fundermaps Home Info" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img
+                      src="src/svg/icons/fundermaps/home-settings.svg"
+                      alt="Icon Fundermaps Home Settings"
+                      class="w-6"
+                    />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/home.svg" alt="Icon Fundermaps Home" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/image.svg" alt="Icon Fundermaps Image" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/info.svg" alt="Icon Fundermaps Info" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/lock.svg" alt="Icon Fundermaps Lock" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/map.svg" alt="Icon Fundermaps Map" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/reports.svg" alt="Icon Fundermaps Reports" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/search.svg" alt="Icon Fundermaps Search" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/settings.svg" alt="Icon Fundermaps Settings" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/signal.svg" alt="Icon Fundermaps Signal" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/target.svg" alt="Icon Fundermaps Target" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/times.svg" alt="Icon Fundermaps times" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/tools.svg" alt="Icon Fundermaps Tools" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/trash.svg" alt="Icon Fundermaps Trash" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/fundermaps/upload.svg" alt="Icon Fundermaps Upload" class="w-6" />
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="sg-item">
+              <h5 class="sg-item__title">Fundermaps - accent</h5>
+              <div class="flex flex-wrap gap-3">
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="accent-color-blue w-6">
+                      <g
+                        stroke-width="2.29"
+                        fill="none"
+                        fill-rule="evenodd"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M15.822 29.644c7.633 0 13.822-6.189 13.822-13.822C29.644 8.188 23.455 2 15.822 2 8.188 2 2 8.188 2 15.822c0 7.633 6.188 13.822 13.822 13.822Z"
+                          stroke="currentColor"
+                        />
+                        <path class="stroke-accent" stroke="currentColor" d="m22.025 11.037-8.506 10.632-4.253-3.189" />
+                      </g>
+                    </svg>
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="accent-color-blue w-6">
+                      <g
+                        stroke-width="2.29"
+                        stroke="currentColor"
+                        fill="none"
+                        fill-rule="evenodd"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M9.443 29.644h18.074a2.126 2.126 0 0 0 2.127-2.127V9.442a2.126 2.126 0 0 0-2.127-2.126H9.443a2.126 2.126 0 0 0-2.127 2.126v18.075c0 1.175.952 2.127 2.127 2.127Z"
+                        />
+                        <path class="stroke-accent" d="M2 23.264V4.126A2.126 2.126 0 0 1 4.126 2h19.138" />
+                      </g>
+                    </svg>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="sg-item">
+              <h5 class="sg-item__title">Fundering</h5>
+              <div class="flex flex-wrap gap-3">
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img
+                      src="src/svg/icons/foundation/betonnen-palen.svg"
+                      alt="Fundering Betonnen Palen"
+                      class="w-12"
+                    />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img
+                      src="src/svg/icons/foundation/houten-palen-oplanger.svg"
+                      alt="Fundering Houten Palen Oplanger"
+                      class="w-12"
+                    />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/foundation/houten-palen.svg" alt="Fundering Houten Palen" class="w-12" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img
+                      src="src/svg/icons/foundation/niet-onderheid.svg"
+                      alt="Fundering Niet Onderheid"
+                      class="w-12"
+                    />
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="sg-item">
+              <h5 class="sg-item__title">Gevel</h5>
+              <div class="flex flex-wrap gap-3">
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/facade/achter.svg" alt="Gevel Achter" class="w-12" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/facade/inpandig.svg" alt="Gevel Inpandig" class="w-12" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/facade/links.svg" alt="Gevel Links" class="w-12" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/facade/rechts.svg" alt="Gevel Rechts" class="w-12" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/facade/voor.svg" alt="Gevel voor" class="w-12" />
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="sg-item">
+              <h5 class="sg-item__title">Classification</h5>
+              <div class="flex flex-wrap gap-3">
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/classification/a.svg" alt="Classification A" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/classification/b.svg" alt="Classification B" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/classification/c.svg" alt="Classification C" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/classification/d.svg" alt="Classification D" class="w-6" />
+                  </div>
+                </article>
+                <article>
+                  <div class="rounded-sm bg-grey-200 p-2">
+                    <img src="src/svg/icons/classification/e.svg" alt="Classification E" class="w-6" />
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Shadows -->
+        <section id="colors" class="sg-section">
+          <div class="container mx-auto">
+            <header class="sg-section__header">
+              <h2>Shadows</h2>
+            </header>
+
+            <div class="sg-item">
+              <h5 class="sg-item__title"></h5>
+              <div class="flex flex-wrap gap-3">
+                <article class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-white shadow-hover"></div>
+                  <div class="sg-label">hover</div>
+                </article>
+                <article class="space-y-1">
+                  <div class="aspect-square w-20 rounded bg-white shadow-float"></div>
+                  <div class="sg-label">float</div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script type="module" src="./src/scripts/main.js"></script>
+  </body>
+</html>

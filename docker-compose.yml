@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:stable-alpine
+    volumes:
+      - ./public:/usr/share/nginx/html
+    environment:
+      - VIRTUAL_HOST=fundermaps.lemone.design
+      - LETSENCRYPT_HOST=fundermaps.lemone.design
+      - SERVER_TOKENS=off
+    expose:
+      - 80
+
+networks:
+  default:
+    name: nginx-proxy

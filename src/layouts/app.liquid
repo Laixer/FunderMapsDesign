@@ -1,0 +1,27 @@
+{% include "app/lemone" %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ app.title }} - {{ meta.title | default: app.title }}</title>
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/design-system.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/lemone-design/css/lemone-design.css' | url }}" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="{{ "/assets/images/fav.svg" | url }}">
+    <script type="module" src="{{ '/lemone-design/js/lemone-design.js' | url }}"></script>
+    <script
+      defer
+      data-domain="fundermaps.lemone.design"
+      src="https://analytics.lemone.com/js/script.js"></script>
+
+    {% include "app/meta" %}
+  </head>
+  <body id="lemone-design">
+    {{ content }}
+  </body>
+</html>

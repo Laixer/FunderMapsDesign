@@ -1,0 +1,52 @@
+---
+title: "Colors"
+excerpt: "This is a list of all the colors used in the design system."
+meta:
+  title: Color Tokens
+eleventyNavigation:
+  key: Colors
+  parent: Design tokens
+---
+
+{% comment %} {{ tailwindColors | log }} {% endcomment %}
+
+{% for color in tailwindColors %}
+  <h5>
+    {{ color[0] | capitalize }}
+  </h5>
+  <table class="w-full">
+    <thead>
+      <tr>
+        <th class="w-1">Preview</th>
+        <th class="">Name</th>
+        <th class="">Examples</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for variant in color[1] %}
+        <tr>
+          {% assign bgColor = 'bg' %}
+          {% capture colorName %} {{ variant[0] | capitalize }}{% endcapture %}
+          {% unless color[0] == "base" %}
+            {% capture bgColor %}{{bgColor}}-{{ color[0] }}{% endcapture %}
+            {% capture colorName %}{{color[0] | capitalize}} {{ variant[0] }}{% endcapture %}
+          {% endunless %}
+          {% if variant[0] %}
+            {% capture bgColor %}{{bgColor}}-{{ variant[0] }}{% endcapture %}
+          {% endif %}
+          <td class="text-center space-y-1">
+            <div class="ld-token | {{bgColor}}"></div>
+            <span class="ld-label">{{ variant[1] }}</span>
+          </td>
+          <td>{{ colorName }}</td>
+          <td>
+            {% codePreview "inline" %}
+              <div class="{{ bgColor }}"></div>
+              <div class="text-{{ color[0] }}-{{ variant[0] }}"></div>
+            {% endcodePreview %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endfor %}

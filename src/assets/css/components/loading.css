@@ -1,0 +1,33 @@
+@media (prefers-reduced-motion) {
+  --loading-animation: none;
+}
+
+.loading-indicator {
+  .logo-mark__green,
+  .logo-mark__yellow,
+  .logo-mark__blue {
+    --loading-animation: animateLoading 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: var(--loading-animation);
+    transform-origin: center;
+  }
+
+  .logo-mark__yellow {
+    animation-delay: 1s;
+  }
+
+  .logo-mark__blue {
+    animation-delay: 2s;
+    transform-origin: center left;
+  }
+}
+
+@keyframes animateLoading {
+  40% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

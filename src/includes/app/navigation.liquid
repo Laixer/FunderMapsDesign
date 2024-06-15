@@ -1,0 +1,25 @@
+<aside class="ld-sidebar | px-6 pt-10 pb-4">
+  <header>
+    <div class="logo">
+      <a href="/" class="flex gap-2 items-center">
+        <img
+          src="/assets/images/logo.svg"
+          alt="Fundermaps"
+          class="w-full">
+        <span class="sr-only">Logo Fundermaps</span>
+      </a>
+    </div>
+  </header>
+
+  <nav>
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml: navToHtmlOptions }}
+  </nav>
+
+  <footer>
+    <small class="copyright">
+      &copy; {% year %}
+      <a href="https://lemone.com">Lemone</a>
+    </small>
+  </footer>
+
+</aside>

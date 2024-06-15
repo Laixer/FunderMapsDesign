@@ -1,0 +1,40 @@
+<div class="space-y-6">
+  <div class="input--text">
+    <label for="input-default" class="input__label">
+      Input default</label>
+    <div class="input__message">Explanation about how to fill in the field.</div>
+    <div class="input-field">
+      <input
+        type="text"
+        id="input-default"
+        name="input-default"
+        placeholder="Type something" />
+    </div>
+  </div>
+  <div class="input--text">
+    <label for="input-default" class="input__label">
+      Input default success</label>
+    <div class="input__message">Explanation about how to fill in the field.</div>
+    <div class="input-field" data-validation="success">
+      <input
+        type="text"
+        id="input-default"
+        name="input-default"
+        value="Correct value" />
+    </div>
+    <div class="input__message" data-variant="success">Dit veld is verplicht</div>
+  </div>
+  <div class="input--text">
+    <label for="input-default" class="input__label">
+      Input default error</label>
+    <div class="input__message">Explanation about how to fill in the field.</div>
+    <div class="input-field" data-validation="error">
+      <input
+        type="text"
+        id="input-default"
+        name="input-default"
+        value="Incorrect value" />
+    </div>
+    <div class="input__message" data-variant="error">Dit veld is verplicht</div>
+  </div>
+</div>

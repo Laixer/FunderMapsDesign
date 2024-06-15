@@ -1,0 +1,33 @@
+---
+layout: app
+title: My Page Title
+parent: My Parent Key
+eleventyComputed:
+  navToHtmlOptions:
+    listClass: "ld-navigation"
+    activeListItemClass: "current"
+    listItemHasChildrenClass: "hasChildren"
+    activeKey: "{{ eleventyNavigation.key }}"
+---
+
+{% block main %}
+  <div class="ld-main | w-full" data-variant="sidebar">
+
+    {% include 'app/navigation' %}
+
+    <main class="px-8 py-8">
+      <div class="ld-content container mx-auto">
+        <header>
+          <h1>
+            {{ title }}
+          </h1>
+          {% if status %}
+            <small class="hidden">{{ status }}</small>
+          {% endif %}
+        </header>
+        {{ content }}
+      </div>
+    </main>
+
+  </div>
+{% endblock %}

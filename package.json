@@ -1,0 +1,36 @@
+{
+  "name": "lemone-design",
+  "version": "1.0.0",
+  "description": "starter for design systems based on 11ty",
+  "author": "lemone.com",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx @11ty/eleventy --serve --incremental",
+    "build": "npx @11ty/eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-plugin-webc": "^0.11.2",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.0",
+    "esbuild": "^0.20.0",
+    "postcss": "^8.4.32",
+    "postcss-import": "^15.1.0",
+    "postcss-import-ext-glob": "^2.0.1",
+    "postcss-js": "^4.0.0",
+    "postcss-nesting": "^12.0.2",
+    "prettier": "^3.2.2",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "shiki": "^0.14.7",
+    "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "@alpinejs/collapse": "^3.13.3",
+    "@alpinejs/ui": "^3.13.3-beta.4",
+    "@kurkle/color": "^0.3.2",
+    "alpinejs": "^3.13.3",
+    "chart.js": "^4.4.1"
+  }
+}

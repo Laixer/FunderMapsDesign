@@ -1,0 +1,64 @@
+<div class="dropdown | arrow arrow--top-left | relative">
+  <div class="dropdown__main | relative grid rounded-lg bg-white py-4 shadow-float">
+    <div class="dropdown__header flex items-baseline justify-between px-8 pb-2 pt-3">
+      <h5 class="heading-5">Mijn kaartengroepen</h5>
+      <button class="button button--link | group ml-auto -translate-y-3 translate-x-3 p-0 text-blue-900 hover:text-red-500">
+        <div class="button__label text-sm">Sluit</div>
+        {% inlineSvg "close" "aspect-square h-3 text-red-500" -%}
+      </button>
+    </div>
+    <div class="dropdown__content">
+      <ol>
+        <li class="">
+          <a href="javascript:console.log('clicked link');" class="flex items-start gap-3 px-8 py-2 hover:bg-grey-100">
+            <figure><img
+                src="https://i.lemone.space/image/pizza?1"
+                alt=""
+                class="avatar | aspect-square w-8 rounded-full" /></figure>
+            <div>
+              <h6 class="heading-6 leading-none">Gemeente Den Haag</h6>
+              <div class="flex gap-2 text-green-500">{% inlineSvg "switch" "aspect-square w-4" -%}Naar deze Kaartgoep</div>
+            </div>
+          </a>
+        </li>
+        <li class="">
+          <a href="javascript:console.log('clicked link');" class="flex items-start gap-3 px-8 py-2 hover:bg-grey-100">
+            <figure><img
+                src="https://i.lemone.space/image/pizza?2"
+                alt=""
+                class="avatar | aspect-square w-8 rounded-full" /></figure>
+            <div>
+              <h6 class="heading-6 leading-none">Gemeente Rotterdam</h6>
+              <div class="flex gap-2 text-green-500">{% inlineSvg "switch" "aspect-square w-4" -%}Naar deze Kaartgoep</div>
+            </div>
+          </a>
+        </li>
+        <li class="">
+          <a href="javascript:console.log('clicked link');" class="flex items-start gap-3 px-8 py-2 hover:bg-grey-100">
+            <figure class="relative"><img
+                src="https://i.lemone.space/image/pizza?3"
+                alt=""
+                class="avatar | aspect-square w-8 rounded-full" /><div class="absolute bottom-0 right-0 translate-x-1 translate-y-2 rounded-full border border-white bg-blue-500 p-1 text-white">{% inlineSvg "check" "aspect-square w-2" -%}</div>
+            </figure>
+            <div>
+              <h6 class="heading-6 leading-none">Gemeente Schiedam</h6>
+              <div class="text-blue-500">Geselecteerde Kaartgoep</div>
+            </div>
+          </a>
+        </li>
+        <li class="">
+          <a href="javascript:console.log('clicked link');" class="flex items-start gap-3 px-8 py-2 hover:bg-grey-100">
+            <figure><img
+                src="https://i.lemone.space/image/pizza?4"
+                alt=""
+                class="avatar | aspect-square w-8 rounded-full" /></figure>
+            <div>
+              <h6 class="heading-6 leading-none">Gemeente Utrecht</h6>
+              <div class="flex gap-2 text-green-500">{% inlineSvg "switch" "aspect-square w-4" -%}Naar deze Kaartgoep</div>
+            </div>
+          </a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>

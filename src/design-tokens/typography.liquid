@@ -1,0 +1,35 @@
+---
+title: "Typography"
+excerpt: "Fonts and text styles used in the design system."
+meta:
+  title: "Typography"
+eleventyNavigation:
+  key: Typography
+  parent: Design tokens
+---
+
+<h3>Fonts</h3>
+
+{% for family in tailwindFonts %}
+  <header>
+    <div class="ld-label">font-{{ family[0] | downcase }}</div>
+    <h4>
+      {{ family[1] }}
+    </h4>
+  </header>
+
+  {% preview %}
+    <div class="ld-preview--font">
+      {% for item in tailwindFontSizes reversed %}
+        <div class="flex items-baseline gap-4 w-full overflow-clip">
+          <div class="ld-label whitespace-nowrap w-20 flex-initial flex-shrink-0">.text-{{ item }}</div>
+          <div class="font-{{ family[0] }} text-{{ item }} w-full truncate">
+            When life gives you lemons, get tequila and salt.
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endpreview %}
+
+{% endfor %}

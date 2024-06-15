@@ -1,0 +1,58 @@
+variables:
+  NODE_VERSION: 20
+  DOMAIN_NAME: fundermaps.lemone.design
+  SERVER_NAME: nebula.lemone.network
+  DEPLOY_USER: deploy
+
+before_script:
+  - echo "Setup SSH keypair"
+  - "which ssh-agent || ( apk add --update openssh-client )"
+  - eval $(ssh-agent -s)
+  - echo "$NGINX_PROXY_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - ssh-keyscan $SERVER_NAME >> ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+
+stages:
+  - build
+  - deploy
+
+yarn build:
+  image: node:$NODE_VERSION
+  stage: build
+  script:
+    - yarn
+    - yarn build
+  artifacts:
+    name: "build-$CI_PIPELINE_ID"
+    paths:
+      - dist
+
+pages:
+  stage: deploy
+  script:
+    - mkdir public
+    - mv dist/* public/
+  artifacts:
+    name: "$CI_PIPELINE_ID"
+    paths:
+      - public
+    expire_in: 5 days
+  when: always
+  only:
+    - develop
+
+deploy:
+  stage: deploy
+  script:
+    - apk add rsync
+    - ssh $DEPLOY_USER@$SERVER_NAME "mkdir -p /srv/www/vhosts/$DOMAIN_NAME/public"
+    - rsync -rtvz -e "ssh -o StrictHostKeyChecking=no" --chmod=D2755,F644 dist/ $DEPLOY_USER@$SERVER_NAME:/srv/www/vhosts/$DOMAIN_NAME/public
+    - rsync -rtvz -e "ssh -o StrictHostKeyChecking=no" --chmod=D2755,F644 docker-compose.yml $DEPLOY_USER@$SERVER_NAME:/srv/www/vhosts/$DOMAIN_NAME/
+    - ssh $DEPLOY_USER@$SERVER_NAME "cd /srv/www/vhosts/$DOMAIN_NAME && docker-compose up -d --build"
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

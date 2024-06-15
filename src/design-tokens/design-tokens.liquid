@@ -1,0 +1,28 @@
+---
+title: "Design Tokens"
+excerpt:
+meta:
+  title: Design Tokens
+eleventyNavigation:
+  key: Design tokens
+  order: 20
+---
+
+<div class="grid grid-cols-2 gap-10">
+  {%- for item in collections.design-tokens -%}
+    {% unless page.url == item.url %}
+      <a href="{{ item.url }}" class="ld-card">
+        <div class="ld-card__media | aspect-video">
+          <img
+            src="/lemone-design/icons/token-{{ item.data.title | slugify }}.svg"
+            alt=""
+            class="">
+        </div>
+        <div class="ld-card__content ld-group">
+          <h4 class="ld-group-hover">{{ item.data.title }}</h4>
+          <p>{{ item.data.excerpt }}</p>
+        </div>
+      </a>
+    {% endunless %}
+  {%- endfor -%}
+</div>

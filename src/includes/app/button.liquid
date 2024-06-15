@@ -1,0 +1,10 @@
+{% assign label = label | default: "Download" %}
+{% assign url = url | default: "javascript:alert('missing link')" %}
+
+<a
+  href="{{ url }}"
+  class="ld-button"
+  {%- if download %}
+  download{% endif -%}>
+  {{ label }}
+</a>

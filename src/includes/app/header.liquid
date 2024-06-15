@@ -1,0 +1,30 @@
+<header class="ld-header | flex px-4 py-4">
+  <div class="logo">
+    <a href="/">Logo Here</a>
+  </div>
+  <nav class="ld-navigation--main">
+    {% assign navPages = collections.all | eleventyNavigation %}
+
+    <ul class="flex">
+      {%- for entry in navPages %}
+
+        {% assign isActive = false %}
+
+        {% if entry.url == page.url or entry.key == eleventyNavigation.parent %}
+          {% assign isActive = true %}
+        {% endif %}
+
+        <li
+          {% if isActive %}
+          class="active"
+          {% endif %}>
+          <a
+            href="{{ entry.url }}"
+            {% if isActive %}
+            class="active"
+            {% endif %}>{{ entry.title }}</a>
+        </li>
+      {%- endfor %}
+    </ul>
+  </nav>
+</header>
